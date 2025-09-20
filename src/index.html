@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2: Nunjucks + Vite Implementation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">🚀 TechSolutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section bg-gradient text-white py-5">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInUp">
+                            Welcome to <span class="text-warning">TechSolutions</span> 💻
+                        </h1>
+                        <p class="lead mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                            We create innovative digital solutions that transform businesses and drive success in the modern world. 🌟
+                        </p>
+                        <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-2s">
+                            <a href="#services" class="btn btn-warning btn-lg me-3 px-4 py-2">
+                                🎯 Our Services
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg px-4 py-2">
+                                📞 Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center animate__animated animate__fadeInRight">
+                        <img src="https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                             alt="Technology Solutions" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary">About Us 🏢</h2>
+                    <p class="lead text-muted">Discover our journey and expertise in technology solutions</p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4">
+                    <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                         alt="Our Team" class="img-fluid rounded-3 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="h2 mb-4 text-primary">Our Story 📖</h3>
+                    <p class="mb-4">
+                        Founded in 2020, TechSolutions has been at the forefront of digital transformation, 
+                        helping businesses adapt and thrive in an increasingly connected world.
+                    </p>
+                    
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="text-center">
+                                <div class="display-6">✅</div>
+                                <h4 class="fw-bold text-primary">500+</h4>
+                                <p class="small text-muted">Projects Completed</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <div class="display-6">😊</div>
+                                <h4 class="fw-bold text-primary">200+</h4>
+                                <p class="small text-muted">Happy Clients</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <div class="display-6">👥</div>
+                                <h4 class="fw-bold text-primary">50+</h4>
+                                <p class="small text-muted">Team Members</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="text-center">
+                                <div class="display-6">⭐</div>
+                                <h4 class="fw-bold text-primary">5+</h4>
+                                <p class="small text-muted">Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary">Our Services 🛠️</h2>
+                    <p class="lead text-muted">Comprehensive technology solutions for your business needs</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <span class="display-4">💻</span>
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Web Development</h5>
+                            <p class="card-text text-muted mb-3">Custom websites and web applications built with modern technologies and best practices.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-1"><i class="text-success">✓</i> Responsive Design</li>
+                                <li class="mb-1"><i class="text-success">✓</i> SEO Optimized</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Fast Loading</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Mobile First</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <span class="display-4">📱</span>
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Mobile Apps</h5>
+                            <p class="card-text text-muted mb-3">Native and cross-platform mobile applications for iOS and Android devices.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-1"><i class="text-success">✓</i> iOS Development</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Android Apps</li>
+                                <li class="mb-1"><i class="text-success">✓</i> React Native</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Flutter</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <span class="display-4">☁️</span>
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Cloud Solutions</h5>
+                            <p class="card-text text-muted mb-3">Scalable cloud infrastructure and migration services for modern businesses.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-1"><i class="text-success">✓</i> AWS/Azure</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Migration</li>
+                                <li class="mb-1"><i class="text-success">✓</i> DevOps</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <span class="display-4">🎨</span>
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">UI/UX Design</h5>
+                            <p class="card-text text-muted mb-3">User-centered design solutions that create engaging digital experiences.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-1"><i class="text-success">✓</i> User Research</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Wireframing</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Prototyping</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Visual Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <span class="display-4">🔒</span>
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Cybersecurity</h5>
+                            <p class="card-text text-muted mb-3">Comprehensive security solutions to protect your digital assets and data.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-1"><i class="text-success">✓</i> Security Audits</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Penetration Testing</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Compliance</li>
+                                <li class="mb-1"><i class="text-success">✓</i> 24/7 Monitoring</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm service-card">
+                        <div class="card-body p-4">
+                            <div class="service-icon mb-3">
+                                <span class="display-4">📊</span>
+                            </div>
+                            <h5 class="card-title fw-bold text-primary">Data Analytics</h5>
+                            <p class="card-text text-muted mb-3">Transform your data into actionable insights with advanced analytics solutions.</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-1"><i class="text-success">✓</i> Business Intelligence</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Data Visualization</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Machine Learning</li>
+                                <li class="mb-1"><i class="text-success">✓</i> Reporting</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary">Our Portfolio 🎨</h2>
+                    <p class="lead text-muted">Showcasing our latest projects and success stories</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card portfolio-card border-0 shadow-sm">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top portfolio-img" alt="E-Commerce Platform">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h5 class="text-white fw-bold">E-Commerce Platform</h5>
+                                    <p class="text-white-50 mb-3">Modern e-commerce solution with advanced features</p>
+                                    <a href="#" class="btn btn-warning btn-sm">View Project 👁️</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Web Development</span>
+                            <h6 class="card-title">E-Commerce Platform</h6>
+                            <p class="card-text text-muted small">Modern e-commerce solution with advanced features</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card portfolio-card border-0 shadow-sm">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top portfolio-img" alt="Healthcare Mobile App">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h5 class="text-white fw-bold">Healthcare Mobile App</h5>
+                                    <p class="text-white-50 mb-3">Comprehensive healthcare management application</p>
+                                    <a href="#" class="btn btn-warning btn-sm">View Project 👁️</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Mobile Development</span>
+                            <h6 class="card-title">Healthcare Mobile App</h6>
+                            <p class="card-text text-muted small">Comprehensive healthcare management application</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card portfolio-card border-0 shadow-sm">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top portfolio-img" alt="Financial Dashboard">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h5 class="text-white fw-bold">Financial Dashboard</h5>
+                                    <p class="text-white-50 mb-3">Real-time financial analytics and reporting system</p>
+                                    <a href="#" class="btn btn-warning btn-sm">View Project 👁️</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Data Analytics</span>
+                            <h6 class="card-title">Financial Dashboard</h6>
+                            <p class="card-text text-muted small">Real-time financial analytics and reporting system</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card portfolio-card border-0 shadow-sm">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top portfolio-img" alt="Learning Management System">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h5 class="text-white fw-bold">Learning Management System</h5>
+                                    <p class="text-white-50 mb-3">Comprehensive online learning platform</p>
+                                    <a href="#" class="btn btn-warning btn-sm">View Project 👁️</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Education Technology</span>
+                            <h6 class="card-title">Learning Management System</h6>
+                            <p class="card-text text-muted small">Comprehensive online learning platform</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card portfolio-card border-0 shadow-sm">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top portfolio-img" alt="IoT Smart Home">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h5 class="text-white fw-bold">IoT Smart Home</h5>
+                                    <p class="text-white-50 mb-3">Intelligent home automation system</p>
+                                    <a href="#" class="btn btn-warning btn-sm">View Project 👁️</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">IoT Solutions</span>
+                            <h6 class="card-title">IoT Smart Home</h6>
+                            <p class="card-text text-muted small">Intelligent home automation system</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card portfolio-card border-0 shadow-sm">
+                        <div class="position-relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top portfolio-img" alt="Corporate Website">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-overlay-content">
+                                    <h5 class="text-white fw-bold">Corporate Website</h5>
+                                    <p class="text-white-50 mb-3">Professional corporate website with modern design</p>
+                                    <a href="#" class="btn btn-warning btn-sm">View Project 👁️</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary mb-2">Web Design</span>
+                            <h6 class="card-title">Corporate Website</h6>
+                            <p class="card-text text-muted small">Professional corporate website with modern design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold text-primary">Get In Touch 📞</h2>
+                    <p class="lead text-muted">Ready to start your next project? Let's discuss your requirements</p>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h4 class="mb-4 text-primary">Contact Information 📋</h4>
+                        
+                        <div class="contact-item mb-3 p-3 bg-light rounded">
+                            <div class="d-flex align-items-center">
+                                <span class="contact-icon me-3 fs-4">📧</span>
+                                <div>
+                                    <h6 class="mb-1 text-primary">Email</h6>
+                                    <a href="mailto:hello@techsolutions.com" class="text-decoration-none text-muted">hello@techsolutions.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-3 p-3 bg-light rounded">
+                            <div class="d-flex align-items-center">
+                                <span class="contact-icon me-3 fs-4">📱</span>
+                                <div>
+                                    <h6 class="mb-1 text-primary">Phone</h6>
+                                    <a href="tel:+15551234567" class="text-decoration-none text-muted">+1 (555) 123-4567</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-3 p-3 bg-light rounded">
+                            <div class="d-flex align-items-center">
+                                <span class="contact-icon me-3 fs-4">📍</span>
+                                <div>
+                                    <h6 class="mb-1 text-primary">Address</h6>
+                                    <a href="#" class="text-decoration-none text-muted">123 Tech Street, Innovation City, IC 12345</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item mb-3 p-3 bg-light rounded">
+                            <div class="d-flex align-items-center">
+                                <span class="contact-icon me-3 fs-4">🌐</span>
+                                <div>
+                                    <h6 class="mb-1 text-primary">Website</h6>
+                                    <a href="https://techsolutions.com" class="text-decoration-none text-muted">www.techsolutions.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <h6 class="text-primary mb-3">Follow Us 🤝</h6>
+                            <div class="d-flex gap-3">
+                                <a href="https://linkedin.com" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                                    💼 LinkedIn
+                                </a>
+                                <a href="https://twitter.com" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                                    🐦 Twitter
+                                </a>
+                                <a href="https://github.com" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                                    🐱 GitHub
+                                </a>
+                                <a href="https://instagram.com" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+                                    📸 Instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h4 class="mb-4 text-primary">Send us a Message ✉️</h4>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone">
+                                </div>
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">Choose a service...</option>
+                                        <option value="web-development">Web Development</option>
+                                        <option value="mobile-apps">Mobile Apps</option>
+                                        <option value="cloud-solutions">Cloud Solutions</option>
+                                        <option value="ui-ux-design">UI/UX Design</option>
+                                        <option value="cybersecurity">Cybersecurity</option>
+                                        <option value="data-analytics">Data Analytics</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Subscribe to our newsletter for updates 📬
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg px-4">
+                                        🚀 Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">🚀 TechSolutions</h5>
+                    <p class="text-light">
+                        Leading the digital transformation with innovative technology solutions 
+                        that empower businesses to achieve their goals.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" class="text-white me-3 text-decoration-none" target="_blank">
+                            <span class="fs-5">💼</span>
+                        </a>
+                        <a href="https://twitter.com" class="text-white me-3 text-decoration-none" target="_blank">
+                            <span class="fs-5">🐦</span>
+                        </a>
+                        <a href="https://github.com" class="text-white me-3 text-decoration-none" target="_blank">
+                            <span class="fs-5">🐱</span>
+                        </a>
+                        <a href="https://instagram.com" class="text-white me-3 text-decoration-none" target="_blank">
+                            <span class="fs-5">📸</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Services</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#services" class="text-light text-decoration-none">Web Development</a></li>
+                        <li><a href="#services" class="text-light text-decoration-none">Mobile Apps</a></li>
+                        <li><a href="#services" class="text-light text-decoration-none">Cloud Solutions</a></li>
+                        <li><a href="#services" class="text-light text-decoration-none">UI/UX Design</a></li>
+                        <li><a href="#services" class="text-light text-decoration-none">Cybersecurity</a></li>
+                        <li><a href="#services" class="text-light text-decoration-none">Data Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="#portfolio" class="text-light text-decoration-none">Portfolio</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Careers</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-3">Newsletter 📬</h6>
+                    <p class="text-light">Stay updated with our latest news and offers.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-light">
+                        &copy; 2025 TechSolutions. All rights reserved. Made with ❤️
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small class="text-light">
+                        🛠️ Built with Nunjucks + Vite | Task 2 Implementation
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
