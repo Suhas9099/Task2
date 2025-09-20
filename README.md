@@ -211,16 +211,16 @@ This project is created for internship evaluation purposes.
 
 ---
 
-**Built with ❤️ using Nunjucks + Vite**  
+**Built with  using Nunjucks + Vite**  
 *Task 2 Implementation - Modern Templating & Build Tools*
 
 ---
 
 ## 🔗 Links
 
-- **Live Demo**: [Will be provided after deployment]
-- **Task 1 Reference**: [https://capable-beijinho-e8369c.netlify.app/](https://capable-beijinho-e8369c.netlify.app/)
-- **Repository**: [Will be provided after GitHub upload]
+- **Live Demo**: [[(https://task-2-nunjucks-vite-ohqq.bolt.host/?#)]]
+- **Task 1 Reference**: [(https://capable-beijinho-e8369c.netlify.app/)]
+- **Repository**: [[(https://github.com/Suhas9099/Task2.git)]]
 
 ---
 
